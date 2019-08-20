@@ -99,7 +99,7 @@ li a:hover {
           <p><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal"></i>DPhil Candidate (Oncology) at the University of Oxford</p>
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Research Scientist Intern at Mirada Medical</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Oxford, UK</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>markdanielbrooke@gmail.com</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:markdanielbrooke@gmail.com?Subject=Saw%20Your%20Website">markdanielbrooke@gmail.com</a></p>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
           <p>Radiotherapy physics</p>
@@ -134,9 +134,9 @@ li a:hover {
           <div class="overlay">Predicted Relative biological effectiveness (RBE) of protons can vary significantly with biological end-point and physical quantities such as linear energy transfer (LET). (Unpublished. Work in progress.)</div>
         </div>
         <div class="w3-container">
-          <p class="main">  My PhD research focuses on incorporating radiobiological considerations into treatment planning for proton and heavy ion therapies. Conventional radiation therapy, using x-rays, is not able to achieve the same targeted effects that particles such as protons can offer. Upon these particles being fired into the patient from an external accelerator nozzle, energy is deposited and cells receive a radiation dose. We can tune the beam parameters such that the tumour receives a conformal and lethal dose, while the surrounding healthy tissues receive only a small amount of residual dose. However, this nice dose deposition characteristic does not tell the full story. Particles induce different radiobiological effects when they interact with biological material, which must be better understood before proceeding with treatment.
+          <p class="main">  My PhD research focuses on incorporating radiobiological considerations into treatment planning for proton and heavy ion therapies. Conventional radiation therapy, using x-rays, is not able to achieve the same targeted effects that particles such as protons can offer. Upon these particles entering the patient from an external accelerator nozzle, energy is deposited and cells receive a radiation dose. We can tune the beam parameters such that the tumour receives a conformal and lethal dose, while the surrounding healthy tissues receive only a small amount of residual dose. However, this nice dose deposition characteristic does not tell the full story. Particles induce different radiobiological effects when they interact with biological material, which must be better understood before proceeding with treatment.
           </p>
-          <p class="main"> My work models some of these radiobiological effects and incorporates them directly into an automated optimisation algorithm for planning particle therapy treatments. Such an algorithm will allow for fast treatment plan creation and reduced biological uncertainties, which has the potential to improve both treatment quality and clinical workflow.
+          <p class="main"> My work models some of these radiobiological effects and incorporates them directly into an automated optimisation algorithm for planning particle therapy treatments. Such an algorithm will allow for fast treatment-plan creation and reduced biological uncertainties, providing the potential to improve both treatment quality and clinical workflow.
           </p>
           <hr>
         </div>
@@ -146,9 +146,9 @@ li a:hover {
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <!--<h3 class="w3-text-black w3-padding-16" style="font-family:'Stint Ultra Condensed', cursive; font-size:36px">Radiobiological Optimisation for Particle Therapy</h3>-->
         <div class="w3-container">
-          <p class="main">Computed tomography (CT) simulation is an important stage of the radiotherapy planning process. Slice-by-slice images of the patient's anatomy are used to delineate structures relevant to radiotherapy, such as the tumoural volume, at which the dose is targeted, and surrounding healthy tissues, for which the dose is reduced as much as practically possible. The values of pixels (or in 3D, voxels) in the image encode the attenuation of x-rays, which enables one to tune machine parameters such that the treatment prescribed by the oncologist can be achieved. Physics-based models and computer software are used in this phase.
+          <p class="main">Computed tomography (CT) simulation is an important stage of the radiotherapy planning process. Slice-by-slice images of the patient's anatomy are used to delineate structures relevant to radiotherapy, such as tumoural volume, at which the dose is targeted, and surrounding healthy tissues, for which the dose is reduced as much as practically possible. The values of pixels (or in 3D, voxels) in the image encode the attenuation of x-rays, which enables the tuning of machine parameters such that the treatment prescribed by the oncologist can be achieved. Physics-based models and computer software are used in this phase.
           </p>
-          <p class="main"> Proton therapy planning similarly requires knowledge of how different tissues slow down (and even stop) the therapeutic protons as they traverse the body. Using regular CT images, reconstructed from x-ray data, to infer this information requires a calibration which can lead to errors in proton range estimation. By using protons as the imaging particle instead of x-rays, one can bypass the need for calibration. This is the concept of proton CT.
+          <p class="main"> Proton therapy planning similarly requires knowledge of how different tissues slow down (and even stop) the therapeutic protons as they traverse the body. Using regular CT images, reconstructed from x-ray data, to infer this information requires a calibration that can lead to errors in proton range estimation. Use of protons as the imaging particle instead of x-rays bypasses the need for calibration. This is the concept of proton CT.
           </p>
           <hr>
         </div>
@@ -158,14 +158,14 @@ li a:hover {
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <!--<h3 class="w3-text-black w3-padding-16" style="font-family:'Stint Ultra Condensed', cursive; font-size:36px">Radiobiological Optimisation for Particle Therapy</h3>-->
         <div class="w3-container">
-          <p class="main">There has recently been much interest in the application of machine learning techniques to the field of medicine, which many believe will induce a paradigm shift in clinical workflow, diagnosis, and treatment. Convolutional neural networks, a workhorse for image classification, can now, for example, be trained to automatically perform tumour segmentation in seconds, drastically speeding up the conventionally human-operated task of contouring.
+          <p class="main">There has recently been much interest in the application of machine learning techniques to the field of medicine, which many believe will induce a paradigm shift in clinical workflow, diagnosis, and treatment. For example, convolutional neural networks, a workhorse for image classification, can now be trained to automatically perform tumour segmentation in seconds, drastically speeding up the conventionally human-operated task of contouring.
           </p>
           <div class="w3-display-container w3-center"">
           <br>
           <img src="neural.png" style="width:60%" alt="neural">
           <div class="overlay">Basic schematic of a neural network.</div>
         </div>
-          <p class="main">Planning a radiotherapy treatment, from a physics perspective, involves optimising beam fluence maps through intensity modulation, in order to achieve the desired dose distribution. A penalisation can be applied to voxels in the 3D dose map which do not meet the constraints imposed by the physician. This optimisation procedure, when considering both computation time and human intervention to continually re-adjust parameters, can take hours. Using machine learning, the entire procedure may be able to generate a suitable plan in a small fraction of the time.
+          <p class="main">Planning a radiotherapy treatment, from a physics perspective, involves optimising beam fluence maps through intensity modulation, to achieve the desired dose distribution. A penalisation can be applied to voxels in the 3D dose map that do not meet the constraints imposed by the physician. This optimisation procedure, whcih requires both computation time and human intervention to continually re-adjust parameters, can take hours. Using machine learning, the entire procedure may be able to generate a suitable plan in a small fraction of that time.
           </p>
           <hr>
         </div>

@@ -38,6 +38,14 @@ p.main {
 .w3-display-container:hover .overlay {
   opacity:1;
 }
+.mobileShow { display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
+  }
 </style>
 
 <head>
@@ -99,7 +107,7 @@ li a:hover {
           <p><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal"></i>DPhil Candidate (Oncology) at the University of Oxford</p>
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Research Scientist Intern at Mirada Medical</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Oxford, UK</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>markdanielbrooke@gmail.com</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:markdanielbrooke@gmail.com?Subject=Saw%20Your%20Website">markdanielbrooke@gmail.com</a></p>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
           <p>Radiotherapy physics</p>
@@ -124,6 +132,12 @@ li a:hover {
 
     <!-- Right Column -->
     <div class="w3-twothird">
+
+      <div class="w3-container w3-card w3-teal w3-margin-bottom mobileShow">
+        <div class="w3-container mobileShow">
+          <p>Sorry, this site is not optimised for mobile!</p>
+        </div>
+      </div>
 
       <!-- About me -->
       <div class="w3-container" style="background-color:#333333"><h2 class="w3-text-white" w3-padding-16">About me</h2></div>
