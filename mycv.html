@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>Mark Brooke</title>
+<title>Mark Brooke: CV</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed|Ultra&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
@@ -38,6 +40,14 @@ p.main {
 .w3-display-container:hover .overlay {
   opacity:1;
 }
+.mobileShow { display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
+  }
 </style>
 
 <head>
@@ -65,11 +75,81 @@ li a {
 li a:hover {
   background-color: #111;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav a:hover {
+  background-color: #111;
+  color: white;
+}
+.active {
+  background-color: #333;
+  color: white;
+}
+.NOmobileShow { display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 600px){ 
+      .NOmobileShow {display: inline;}
+  }
 </style>
 </head>
 
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
 <body class="w3-dark-grey">
 
+  <!-- Top Navigation Menu if on mobile -->
+  <div class="mobileShow">
+<div class="topnav">
+  <a href="index.html" class="active">markdbrooke.com</a>
+  <div id="myLinks">
+    <a class="active" href="aboutme.html">About Me</a>
+  <a href="interests.html">Research Interests</a>
+  <a href="schedule.html">Conference Attendance</a>
+  <a href="mycv.html">CV</a></li>
+  <a href="awards.html">Awards & Achievements</a>
+  <a href="presentations.html">Publications & Presentations</a>
+  <a href="media.html">Media</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+  <!-- End of mobile menu -->
+
+
+<div class="NOmobileShow">
   <ul>
   <li><a class="active" href="aboutme.html">About Me</a></li>
   <li><a href="interests.html">Research Interests</a></li>
@@ -79,13 +159,15 @@ li a:hover {
   <li><a href="presentations.html">Publications & Presentations</a></li>
   <li><a href="media.html">Media</a></li>
 </ul>
+</div>
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
-  
+    
+    <div class="NOmobileShow">
     <!-- Left Column -->
     <div class="w3-third">
     
@@ -121,6 +203,7 @@ li a:hover {
 
     <!-- End Left Column -->
     </div>
+  </div>
 
     <!-- Right Column -->
     <div class="w3-twothird">
